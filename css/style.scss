@@ -1,0 +1,78 @@
+/********************
+    Variables
+********************/
+
+:root {
+    $btn-color: #9356DC;
+    $bg-color-light: #F3F3F3;
+    $highlight-color-light: #99E2D0;
+    $highlight-color-dark: #008766;
+    $indicator-color-light: #89C8FA;
+    $indicator-color-dark: #003A68;
+}
+
+
+
+/********************
+    General
+********************/
+
+*,
+*::before,
+*::after {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+/********************
+    Header
+********************/
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.header_logo {
+    width: 197px;
+    height: 36px;
+}
+
+
+
+/********************
+    Main
+********************/
+
+/***    location        ***/
+/***    hero            ***/
+/***    instructions    ***/
+/***    restaurants     ***/
+
+
+
+/********************
+    Footer
+********************/
+
+
+
+/********************
+    Tablet
+********************/
+
+
+
+/********************
+    Desktop
+********************/
