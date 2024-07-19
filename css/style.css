@@ -4,10 +4,10 @@
 /********************
     General
 ********************/
-*,
-*::before,
-*::after {
+* {
   font-family: "Roboto", sans-serif;
+}
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -18,15 +18,23 @@ a {
   text-decoration: none;
 }
 
+li {
+  list-style: none;
+}
+
+.fa_solid, .fa_regular {
+  font-family: FontAwesome;
+}
+
 /********************
     Header
 ********************/
-header {
+.header {
   display: flex;
   justify-content: center;
   padding: 1rem;
+  background-color: #FFFFFF;
 }
-
 .header_logo {
   width: 197px;
   height: 36px;
@@ -35,13 +43,52 @@ header {
 /********************
     Main
 ********************/
-/***    location        ***/
-/***    hero            ***/
-/***    instructions    ***/
-/***    restaurants     ***/
+.location {
+  background-color: #EAEAEA;
+}
+
+.hero {
+  background-color: #F3F3F3;
+}
+
+.restaurants {
+  background-color: #F3F3F3;
+}
+
 /********************
     Footer
 ********************/
+.footer {
+  padding: 1rem;
+  background-color: #353535;
+  color: #FFFFFF;
+}
+.footer_logo {
+  width: 139px;
+  height: 27px;
+  margin-bottom: 1rem;
+  filter: invert(100%);
+}
+.footer_link {
+  margin: 0.5rem;
+}
+.footer_link::before {
+  font-family: FontAwesome;
+  font-size: 0.8125rem;
+}
+
+.link_suggest::before {
+  content: "\f2e7";
+  padding-right: 11px;
+}
+
+.link_partner::before {
+  content: "\f4c6";
+  display: inline-block;
+  transform: rotate(-45deg);
+  padding-right: 6px;
+}
+
 /********************
     Tablet
 ********************/
