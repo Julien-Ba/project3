@@ -1,0 +1,102 @@
+/********************
+    Header
+********************/
+
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background-color: $main-bg-clr;
+
+    &-logo {
+        width: 197px;
+        height: 36px;
+    }
+}
+
+
+
+/********************
+    Main
+********************/
+
+//----- location -----//
+
+.location {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background-color: $section-bg-clr-dark;
+
+    &::before {
+        content: "\f3c5";
+        font-family: FontAwesome;
+        @include flex-center;
+        padding-right: 1rem;
+    }
+}
+
+//----- hero -----//
+
+.hero {
+    background-color: $section-bg-clr;
+}
+
+//----- instructions -----//
+
+//----- restaurants -----//
+
+.restaurants {
+    background-color: $section-bg-clr;
+}
+
+
+
+/********************
+    Footer
+********************/
+
+.footer {
+    padding: 1rem;
+    background-color: $footer-bg-clr;
+
+    &-logo {
+        width: 139px;
+        height: 27px;
+        filter: invert(100%);
+    }
+
+    &-link {
+        font-size: 1rem;
+        margin: .5rem;
+
+        &::before {
+            font-family: FontAwesome;
+            font-size: 0.8125rem;
+        }
+    }
+
+    .link-suggest::before {
+        content: "\f2e7";
+        padding-right: 11px;
+    }
+    
+    .link-partner::before {
+        content: "\f4c6";
+        display: inline-block;
+        transform: rotate(-45deg);
+        padding-right: 6px;
+    }
+}
+
+
+
+/********************
+    Tablet
+********************/
+
+
+
+/********************
+    Desktop
+********************/

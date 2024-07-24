@@ -1,0 +1,16 @@
+$main-bg-clr: #FFFFFF;
+$section-bg-clr: #F3F3F3;
+$section-bg-clr-dark: #EAEAEA;
+$footer-bg-clr: #353535;
+$btn-bg-clr: #9356DC;
+$highlight-clr-light: #99E2D0;
+$highlight-clr-dark: #008766;
+$indicator-clr-light: #89C8FA;
+$indicator-clr-dark: #003A68;
+$txt-clr: #000000;
+
+$font--1: clamp(0.9375rem, 0.9196rem + 0.0893vw, 1rem);     // 15px
+$font-0: clamp(1rem, 0.9643rem + 0.1786vw, 1.125rem);       // 16px
+$font-1: clamp(1.067rem, 1.0103rem + 0.2838vw, 1.2656rem);  // 17px
+$font-2: clamp(1.1385rem, 1.057rem + 0.4076vw, 1.4238rem);  // 18px
+$font-3: clamp(1.4757rem, 1.2457rem + 1.1501vw, 2.2807rem); // 24px

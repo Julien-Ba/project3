@@ -1,11 +1,6 @@
-/********************
-    Variables
-********************/
-/********************
-    General
-********************/
 * {
   font-family: "Roboto", sans-serif;
+  color: #000000;
 }
 *, *::before, *::after {
   margin: 0;
@@ -22,8 +17,44 @@ li {
   list-style: none;
 }
 
-.fa_solid, .fa_regular {
+.main-title {
+  font-size: clamp(1.5rem, 1.2143rem + 1.4286vw, 2.5rem);
+}
+
+.main-subtitle {
+  font-size: 1.125rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+}
+
+.card-title {
+  font-size: 1.125rem;
+}
+
+.card-subtitle {
+  font-size: 1.0625rem;
+}
+
+.btn-title {
+  font-size: 1rem;
+}
+
+.tag {
+  font-size: 0.875rem;
+}
+
+.fa-solid, .fa-regular {
   font-family: FontAwesome;
+}
+
+.txt-clr-inv {
+  color: white;
 }
 
 /********************
@@ -35,7 +66,7 @@ li {
   padding: 1rem;
   background-color: #FFFFFF;
 }
-.header_logo {
+.header-logo {
   width: 197px;
   height: 36px;
 }
@@ -44,7 +75,18 @@ li {
     Main
 ********************/
 .location {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
   background-color: #EAEAEA;
+}
+.location::before {
+  content: "\f3c5";
+  font-family: FontAwesome;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 1rem;
 }
 
 .hero {
@@ -61,28 +103,25 @@ li {
 .footer {
   padding: 1rem;
   background-color: #353535;
-  color: #FFFFFF;
 }
-.footer_logo {
+.footer-logo {
   width: 139px;
   height: 27px;
-  margin-bottom: 1rem;
   filter: invert(100%);
 }
-.footer_link {
+.footer-link {
+  font-size: 1rem;
   margin: 0.5rem;
 }
-.footer_link::before {
+.footer-link::before {
   font-family: FontAwesome;
   font-size: 0.8125rem;
 }
-
-.link_suggest::before {
+.footer .link-suggest::before {
   content: "\f2e7";
   padding-right: 11px;
 }
-
-.link_partner::before {
+.footer .link-partner::before {
   content: "\f4c6";
   display: inline-block;
   transform: rotate(-45deg);

@@ -1,0 +1,64 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    color: $txt-clr;
+
+    &,
+    &::before,
+    &::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.main-title {
+    font-size: clamp(1.5rem, 1.2143rem + 1.4286vw, 2.5rem);
+}
+
+.main-subtitle {
+    font-size: 1.125rem;
+}
+
+.section-title {
+    font-size: 1.5rem;
+}
+
+.section-subtitle {
+    font-size: 1rem;
+}
+
+.card-title {
+    font-size: 1.125rem;
+}
+
+.card-subtitle {
+    font-size: 1.0625rem;
+}
+
+.btn-title {
+    font-size: 1rem;
+}
+
+.tag {
+    font-size: 0.875rem;
+}
+
+.fa {
+    &-solid,
+    &-regular {
+        font-family: FontAwesome;
+    }
+}
+
+.txt-clr-inv {
+    color: invert($txt-clr);
+}
