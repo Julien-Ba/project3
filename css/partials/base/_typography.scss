@@ -25,6 +25,11 @@
 
 .card-subtitle {
     font-size: 1.0625rem;
+    font-weight: 300;
+}
+
+.card-description {
+    font-size: 0.9375rem;
 }
 
 .btn-title {
@@ -38,7 +43,10 @@
 .fa {
     &-solid,
     &-regular {
-        font-family: FontAwesome;
+        font-family: "Font Awesome 6 Free";
+    }
+    &-idle {
+        color: $icon-clr-idle;
     }
 }
 

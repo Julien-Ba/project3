@@ -1,0 +1,32 @@
+.footer {
+    padding: 1rem;
+    background-color: $footer-bg-clr;
+
+    &-logo {
+        width: 139px;
+        height: 27px;
+        filter: invert(100%);
+    }
+
+    &-link {
+        font-size: 1rem;
+        margin: .5rem;
+
+        &::before {
+            font-family: FontAwesome;
+            font-size: 0.8125rem;
+        }
+    }
+
+    .link-suggest::before {
+        content: "\f2e7";
+        padding-right: 11px;
+    }
+    
+    .link-partner::before {
+        content: "\f4c6";
+        display: inline-block;
+        transform: rotate(-45deg);
+        padding-right: 6px;
+    }
+}

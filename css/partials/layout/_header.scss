@@ -1,0 +1,10 @@
+.header {
+    @include flex-center;
+    padding: 1rem;
+    background-color: $main-bg-clr;
+
+    &-logo {
+        width: 197px;
+        height: 36px;
+    }
+}
