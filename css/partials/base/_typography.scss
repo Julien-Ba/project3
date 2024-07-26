@@ -1,6 +1,8 @@
+@use "../utils";
+
 * {
     font-family: 'Roboto', sans-serif;
-    color: $txt-clr;
+    color: utils.$txt-clr;
 }
 
 .main-title {
@@ -46,10 +48,10 @@
         font-family: "Font Awesome 6 Free";
     }
     &-idle {
-        color: $icon-clr-idle;
+        color: utils.$icon-clr-idle;
     }
 }
 
 .txt-clr-inv {
-    color: invert($txt-clr);
+    color: invert(utils.$txt-clr);
 }

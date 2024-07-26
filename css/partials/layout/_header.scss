@@ -1,7 +1,9 @@
+@use "../utils";
+
 .header {
-    @include flex-center;
+    @include utils.flex-center;
     padding: 1rem;
-    background-color: $main-bg-clr;
+    background-color: utils.$main-bg-clr;
 
     &-logo {
         width: 197px;

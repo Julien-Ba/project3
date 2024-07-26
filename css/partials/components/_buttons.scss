@@ -1,0 +1,36 @@
+@use "../utils";
+
+.icon-like {
+    font-size: 1.3125rem;
+    @include utils.flex-center;
+
+    .fa-heart {
+        padding: 0.1rem;
+        position: absolute;
+        @include utils.flex-center;
+        transition: transform 250ms ease-in-out;
+    }
+
+    &-outline {
+        transition: color 250ms ease-out;
+    }
+
+    &-outline:hover {
+        color: transparent;
+        transform: scale(1.2);
+    }
+
+    &-bg {
+        transform: scale(0);
+        background: -webkit-gradient(linear, left top, left bottom, from(utils.$btn-bg-clr), to(utils.$btn-bg-clr-light));
+        background: linear-gradient(to bottom, utils.$btn-bg-clr, utils.$btn-bg-clr-light);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-fill-color: transparent;
+
+        .icon-like:hover & {
+            transform: scale(1.1);
+        }
+    }
+}

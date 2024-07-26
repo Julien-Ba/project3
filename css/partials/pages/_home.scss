@@ -1,16 +1,20 @@
-@use 'sass:color';
+@use "sass:color";
+@use "../utils";
+
+
+
 //----- location -----//
 
 .location {
     display: flex;
     justify-content: center;
     padding: 1rem;
-    background-color: $section-bg-clr-dark;
+    background-color: utils.$section-bg-clr-dark;
 
     &::before {
         content: "\f3c5";
         font-family: FontAwesome;
-        @include flex-center;
+        @include utils.flex-center;
         padding-right: 1rem;
     }
 }
@@ -18,13 +22,13 @@
 //----- hero -----//
 
 .explore {
-    @include flex-center;
+    @include utils.flex-center;
     flex-direction: column;
     text-align: center;
     text-wrap: pretty;
     gap: 1rem;
     padding: 2rem;
-    background-color: $section-bg-clr;
+    background-color: utils.$section-bg-clr;
     & button {
         margin-top: 1rem;
     }
@@ -36,7 +40,7 @@
     padding: 2rem 1rem;
 
     &-cards {
-        @include flex-center;
+        @include utils.flex-center;
         flex-direction: column;
         gap: 1rem;
         margin-top: 1rem;
@@ -47,10 +51,10 @@
         height: 4rem;
         display: flex;
         align-items: center;
-        background-color: $section-bg-clr;
+        background-color: utils.$section-bg-clr;
         
         &:hover .fa-solid {
-            color: $btn-bg-clr;
+            color: utils.$btn-bg-clr;
         }
     }
 
@@ -65,10 +69,10 @@
 
 .restaurants {
     padding: 2rem 1rem;
-    background-color: $section-bg-clr;
+    background-color: utils.$section-bg-clr;
 
     &-cards {
-        @include flex-center;
+        @include utils.flex-center;
         flex-direction: column;
         gap: 1rem;
         margin-top: 1rem;
@@ -105,40 +109,7 @@
     // }
 }
 
-.icon-like {
-    font-size: 1.3125rem;
-    @include flex-center;
 
-    .fa-heart {
-        padding: 0.1rem;
-        position: absolute;
-        @include flex-center;
-        transition: transform 250ms ease-in-out;
-    }
-
-    &-outline {
-        transition: color 250ms ease-out;
-    }
-
-    &-outline:hover {
-        color: transparent;
-        transform: scale(1.2);
-    }
-
-    &-bg {
-        transform: scale(0);
-        background: -webkit-gradient(linear, left top, left bottom, from($btn-bg-clr), to($btn-bg-clr-light));
-        background: linear-gradient(to bottom, $btn-bg-clr, $btn-bg-clr-light);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-fill-color: transparent;
-
-        .icon-like:hover & {
-            transform: scale(1.1);
-        }
-    }
-}
 
 /********************
     Tablet

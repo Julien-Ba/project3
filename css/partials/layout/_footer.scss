@@ -1,6 +1,8 @@
+@use "../utils";
+
 .footer {
     padding: 1rem;
-    background-color: $footer-bg-clr;
+    background-color: utils.$footer-bg-clr;
 
     &-logo {
         width: 139px;
