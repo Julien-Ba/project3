@@ -1,12 +1,29 @@
 @use "../utils";
 
+.btn {
+    padding: 1rem 2rem;
+    margin-block: 1rem;
+    border-radius: 2rem;
+    border-style: none;
+    background: linear-gradient(to top, utils.$btn-bg-clr, utils.$btn-bg-clr-light);
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.2));
+    transition: filter 250ms, transform 250ms;
+
+    &:hover {
+        filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.3));
+        transform: scale(1.01);
+    }
+}
+
 .icon-like {
+    position: relative;
     font-size: 1.3125rem;
     @include utils.flex-center;
 
     .fa-heart {
         padding: 0.1rem;
         position: absolute;
+        right: utils.$card-padding;
         @include utils.flex-center;
         transition: transform 250ms ease-in-out;
     }

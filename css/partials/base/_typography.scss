@@ -9,12 +9,15 @@
     font-size: clamp(1.5rem, 1.2143rem + 1.4286vw, 2.5rem);
 }
 
-.main-subtitle {
+.main-description {
     font-size: 1.125rem;
+    font-weight: 300;
 }
 
 .section-title {
     font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
 }
 
 .section-subtitle {
@@ -23,6 +26,7 @@
 
 .card-title {
     font-size: 1.125rem;
+    font-weight: 700;
 }
 
 .card-subtitle {
@@ -36,10 +40,13 @@
 
 .btn-title {
     font-size: 1rem;
+    color: invert(utils.$txt-clr);
 }
 
-.tag {
+.tag-title {
     font-size: 0.875rem;
+    font-weight: 500;
+    color: utils.$highlight-clr-dark;
 }
 
 .fa {
@@ -52,6 +59,6 @@
     }
 }
 
-.txt-clr-inv {
+.footer-link {
     color: invert(utils.$txt-clr);
 }

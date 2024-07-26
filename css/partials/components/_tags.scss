@@ -1,0 +1,11 @@
+@use "../utils";
+
+
+
+.tag {
+    padding: calc(utils.$card-padding / 2) utils.$card-padding;
+    margin: utils.$card-padding;
+    border-radius: 3px;
+    @include utils.flex-center;
+    background-color: utils.$highlight-clr-light;
+}
