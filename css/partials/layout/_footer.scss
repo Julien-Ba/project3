@@ -1,5 +1,7 @@
 @use "../utils";
 
+
+
 .footer {
     padding: 1rem;
     background-color: utils.$footer-bg-clr;
@@ -30,5 +32,22 @@
         display: inline-block;
         transform: rotate(-45deg);
         padding-right: 6px;
+    }
+}
+
+
+
+@include utils.respond-to("tablet") {
+    .footer {
+        display: flex;
+        justify-content: flex-end;
+        gap: 3rem;
+        padding-inline-end: 2rem;
+
+        &-links{
+            order: -1;
+            display: flex;
+            gap: 1rem;
+        }
     }
 }

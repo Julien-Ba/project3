@@ -1,0 +1,29 @@
+@use "sass:map";
+@use "../utils";
+
+
+
+section {
+    padding: 2rem 1rem;
+}
+
+
+
+@include utils.respond-to("tablet") {
+    section {
+        padding-inline: 5vw;
+    }
+}
+
+@include utils.respond-to("desktop") {
+    section {
+        padding-inline: 10vw;
+    }
+}
+
+@include utils.respond-to("max-screen") {
+    .main-container {
+        max-width: map.get(utils.$breakpoints, "max-screen");
+        margin-inline: auto;
+    }
+}

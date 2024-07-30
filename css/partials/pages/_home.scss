@@ -32,10 +32,6 @@
     box-shadow: inset 0 12px 15px -12px rgba(0, 0, 0, 0.6);
 }
 
-//----- instructions -----//
-
-
-
 //----- restaurants -----//
 
 .restaurants {
@@ -44,12 +40,8 @@
 
 
 
-/********************
-    Tablet
-********************/
-
-
-
-/********************
-    Desktop
-********************/
+@include utils.respond-to("tablet") {
+    .location, .explore {
+        box-shadow: none;
+    }
+}

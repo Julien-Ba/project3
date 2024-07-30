@@ -217,6 +217,18 @@ p {
   align-items: center;
 }
 
+@media (min-width: 768px) {
+  .restaurants-cards {
+    grid-template-columns: repeat(2, minmax(auto, 490px));
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1024px) {
+  .instructions-cards {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 .tag {
   padding: 0.5rem 1rem;
   margin: 1rem;
@@ -248,6 +260,22 @@ section {
   padding: 2rem 1rem;
 }
 
+@media (min-width: 768px) {
+  section {
+    padding-inline: 5vw;
+  }
+}
+@media (min-width: 1024px) {
+  section {
+    padding-inline: 10vw;
+  }
+}
+@media (min-width: 1440px) {
+  .main-container {
+    max-width: 1440px;
+    margin-inline: auto;
+  }
+}
 .footer {
   padding: 1rem;
   background-color: #353535;
@@ -276,6 +304,19 @@ section {
   padding-right: 6px;
 }
 
+@media (min-width: 768px) {
+  .footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 3rem;
+    padding-inline-end: 2rem;
+  }
+  .footer-links {
+    order: -1;
+    display: flex;
+    gap: 1rem;
+  }
+}
 .location {
   display: flex;
   justify-content: center;
@@ -309,11 +350,10 @@ section {
   background-color: #F6F6F6;
 }
 
-/********************
-    Tablet
-********************/
-/********************
-    Desktop
-********************/
+@media (min-width: 768px) {
+  .location, .explore {
+    box-shadow: none;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

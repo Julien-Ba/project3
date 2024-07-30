@@ -87,3 +87,19 @@
         align-items: center;
     }
 }
+
+
+
+@include utils.respond-to("tablet") {
+    .restaurants-cards {
+        grid-template-columns: repeat(2, minmax(auto, 490px));
+        justify-content: space-between;
+    }
+}
+
+@include utils.respond-to("desktop") {
+    .instructions-cards {
+        flex-direction: row;
+        justify-content: space-between; 
+    }
+}
