@@ -8,5 +8,11 @@
     &-logo {
         width: 197px;
         height: 36px;
+        transition: filter 250ms ease-in;
+
+        &:hover {
+            filter: drop-shadow(2px 2px rgba(0, 0, 0, 0.1));
+            animation: scaleLogo 1s ease-in-out forwards;
+        }
     }
 }
