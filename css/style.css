@@ -16,6 +16,11 @@ li {
 * {
   font-family: "Roboto", sans-serif;
   color: #000000;
+  line-height: 1.5;
+}
+
+p {
+  max-width: 60ch;
 }
 
 .main-title {
