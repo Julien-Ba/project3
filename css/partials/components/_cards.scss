@@ -47,13 +47,11 @@
         display: grid;
         grid-auto-flow: dense;
         grid-template-rows: 10rem auto;
-        container-type: inline-size;
         gap: 1rem;
 
     & .card {
         display: grid;
         grid-row: span 2;
-        grid-template-rows: subgrid;
         gap: 1rem;
         background-color: utils.$card-bg-clr;
         overflow: hidden;

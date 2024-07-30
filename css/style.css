@@ -128,12 +128,9 @@ p {
 }
 .icon-like-bg {
   transform: scale(0);
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#e371da));
   background: linear-gradient(to bottom, #9356DC, #e371da);
-  -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
+  color: transparent;
 }
 .icon-like:hover .icon-like-bg {
   transform: scale(1.1);
@@ -182,13 +179,11 @@ p {
   display: grid;
   grid-auto-flow: dense;
   grid-template-rows: 10rem auto;
-  container-type: inline-size;
   gap: 1rem;
 }
 .restaurants-cards .card {
   display: grid;
   grid-row: span 2;
-  grid-template-rows: subgrid;
   gap: 1rem;
   background-color: #FFFFFF;
   overflow: hidden;
