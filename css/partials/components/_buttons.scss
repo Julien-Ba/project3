@@ -3,23 +3,35 @@
 
 
 
+// declaration of @property to allow the animation of the background-image that is not animatable
+@property --color-gradient-1 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: color.adjust(utils.$btn-bg-clr, $lightness: 5%);
+}
+@property --color-gradient-2 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: color.adjust(utils.$btn-bg-clr-light, $lightness: 5%);
+}
+
 .btn {
     padding: 1rem 2rem;
     margin-block: 1rem;
     border-radius: 2rem;
     border-style: none;
-    background: linear-gradient(to top, utils.$btn-bg-clr, utils.$btn-bg-clr-light);
+    background: linear-gradient(to top, var(--color-gradient-1), var(--color-gradient-2));
     filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.2));
-    @include utils.transition-out(filter, transform);
+    --color-gradient-1: var(--btn-bg-clr);
+    --color-gradient-2: var(--btn-bg-clr-light);
+    @include utils.transition-out(filter, transform, --color-gradient-1, --color-gradient-2);
 
     &:hover {
-        background: linear-gradient(to top, 
-            color.adjust(utils.$btn-bg-clr, $whiteness: 5%),
-            color.adjust(utils.$btn-bg-clr-light, $whiteness: 5%)
-        );
+        --color-gradient-1: initial;    // i know this seems odd but it's the only way to make @property behave correctly
+        --color-gradient-2: initial;    // when modifying the value, it doesn't accept any function or sass variable
         filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.3));
         transform: scale(1.01);
-        @include utils.transition-in(filter, transform);
+        @include utils.transition-in(filter, transform, --color-gradient-1, --color-gradient-2);
     }
 }
 

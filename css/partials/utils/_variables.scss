@@ -12,7 +12,17 @@ $indicator-clr-dark: #003A68;
 $txt-clr: #000000;
 $icon-clr-idle: #848484;
 
+// seems out of place but is used in different files with calc()
 $card-padding: 1rem;
 
+// control the timing of most animations
 $tr-time-in: 250ms;
 $tr-time-out: 500ms;
+
+:root {
+    // i know right ... but @property is annoying to work with
+    // there is a way to replace this with a mixin but ...
+    // it's not worth the effort right now.
+    --btn-bg-clr: #9356DC;
+    --btn-bg-clr-light: #e371da;
+}
