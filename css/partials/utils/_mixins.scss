@@ -1,5 +1,26 @@
+@use "sass:list";
+@use "../utils/variables";
+
+
+
 @mixin flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@function listTransitions($references, $time, $effect) {
+    $new-list: ();
+    @each $reference in $references {
+        $new-list: list.append($new-list, $reference $time $effect, $separator: comma);
+    }
+    @return $new-list;
+}
+
+@mixin transition-in($references...) {
+    transition: listTransitions($references, variables.$tr-time-in, ease-in);
+}
+
+@mixin transition-out($references...) {
+    transition: listTransitions($references, variables.$tr-time-out, ease-in);
 }
