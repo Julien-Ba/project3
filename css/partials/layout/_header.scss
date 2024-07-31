@@ -10,7 +10,7 @@
     &-logo {
         width: 197px;
         height: 36px;
-        transition: filter 200ms ease-in, transform 200ms ease-in;
+        @include utils.transition-in(filter, transform);
 
         &:hover {
             filter: drop-shadow(2px 2px rgba(0, 0, 0, 0.1));
@@ -18,7 +18,7 @@
         }
 
         &-wrapper {
-            transition: transform 800ms 200ms ease-in-out;
+            transition: transform calc(1000ms - utils.$tr-time-in) utils.$tr-time-in ease-in-out;
 
             &:hover {
                 transform: scaleX(1.1);
