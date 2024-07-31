@@ -10,7 +10,7 @@
     border-style: none;
     background: linear-gradient(to top, utils.$btn-bg-clr, utils.$btn-bg-clr-light);
     filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.2));
-    transition: filter 250ms, transform 250ms;
+    @include utils.transition-out(filter, transform);
 
     &:hover {
         background: linear-gradient(to top, 
@@ -19,6 +19,7 @@
         );
         filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.3));
         transform: scale(1.01);
+        @include utils.transition-in(filter, transform);
     }
 }
 
@@ -32,11 +33,11 @@
         position: absolute;
         right: utils.$card-padding;
         @include utils.flex-center;
-        transition: transform 250ms ease-in-out;
+        transition: transform utils.$tr-time-in ease-in-out;
     }
 
     &-outline {
-        transition: color 250ms ease-out;
+        transition: color utils.$tr-time-in ease-out;
     }
 
     &-outline:hover {

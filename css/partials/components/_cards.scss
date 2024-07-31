@@ -1,15 +1,16 @@
 @use "../utils";
 
 
-
 .card {
     border-radius: 1.25rem;
-    transition: transform 250ms, filter 250ms;
+    @include utils.transition-out(transform, filter);
 
     &:is(:hover, :focus) {
         transform: scale(1.01);
+        @include utils.transition-in(transform);
         &:has(.card-image) {
             filter: brightness(1.02) saturate(1.05);
+            @include utils.transition-in(filter);
         }
     }
 }
@@ -22,12 +23,14 @@
         align-items: center;
         background-color: utils.$section-bg-clr;
         filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.1));
-        transition: filter 250ms ease-in, color 250ms ease-in;
+        @include utils.transition-out(filter, color);
         
         &:hover {
             filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.3));
+            @include utils.transition-in(filter);
             & .fa-solid {
                 color: utils.$btn-bg-clr;
+                @include utils.transition-in(color);
             }
         }
     }
