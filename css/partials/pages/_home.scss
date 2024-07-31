@@ -69,6 +69,7 @@
     .restaurants-cards {
         grid-template-columns: repeat(2, minmax(auto, 31rem));
         justify-content: space-between;
+        gap: 3rem;
     }
 }
 
