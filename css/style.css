@@ -99,6 +99,7 @@ p {
   transition: filter 250ms, transform 250ms;
 }
 .btn:hover {
+  background: linear-gradient(to top, #9a63dc, #e37edb);
   filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.3));
   transform: scale(1.01);
 }

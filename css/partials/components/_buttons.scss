@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "../utils";
 
 
@@ -12,6 +13,10 @@
     transition: filter 250ms, transform 250ms;
 
     &:hover {
+        background: linear-gradient(to top, 
+            color.adjust(utils.$btn-bg-clr, $whiteness: 5%),
+            color.adjust(utils.$btn-bg-clr-light, $whiteness: 5%)
+        );
         filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.3));
         transform: scale(1.01);
     }
