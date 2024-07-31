@@ -218,11 +218,17 @@ p {
 .header-logo {
   width: 197px;
   height: 36px;
-  transition: filter 250ms ease-in;
+  transition: filter 200ms ease-in, transform 200ms ease-in;
 }
 .header-logo:hover {
   filter: drop-shadow(2px 2px rgba(0, 0, 0, 0.1));
-  animation: scaleLogo 1s ease-in-out forwards;
+  transform: scale(1.02);
+}
+.header-logo-wrapper {
+  transition: transform 800ms 200ms ease-in-out;
+}
+.header-logo-wrapper:hover {
+  transform: scaleX(1.1);
 }
 
 section {
