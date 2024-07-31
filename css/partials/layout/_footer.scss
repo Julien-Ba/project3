@@ -40,14 +40,25 @@
 @include utils.respond-to("tablet") {
     .footer {
         display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding-inline: 2rem;
+
+        &-links{
+            display: flex;
+            gap: 1rem;
+        }
+    }
+}
+
+@include utils.respond-to("desktop") {
+    .footer {
+        flex-direction: row;
         justify-content: flex-end;
         gap: 3rem;
-        padding-inline-end: 2rem;
 
         &-links{
             order: -1;
-            display: flex;
-            gap: 1rem;
         }
     }
 }
