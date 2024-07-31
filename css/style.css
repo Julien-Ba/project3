@@ -266,9 +266,8 @@ section {
   }
 }
 @media (min-width: 1440px) {
-  .main-container {
-    max-width: 1440px;
-    margin-inline: auto;
+  section {
+    padding-inline: calc(10vw + (100vw - 1440px) / 2);
   }
 }
 .footer {
