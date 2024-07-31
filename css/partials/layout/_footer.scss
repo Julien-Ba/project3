@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "../utils";
 
 
@@ -60,5 +61,12 @@
         &-links{
             order: -1;
         }
+    }
+}
+
+@include utils.respond-to("max-screen") {
+    .footer {
+        // keeps the desktop padding and add what's above 1440px
+        padding-inline: calc(2rem + ((100vw - map.get(utils.$breakpoints, "max-screen"))/2));
     }
 }
