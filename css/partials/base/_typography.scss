@@ -3,7 +3,7 @@
 
 
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     color: utils.$txt-clr;
     line-height: 1.5;
 }
@@ -12,16 +12,15 @@ p {
     max-width: 60ch;
 }
 
-.loader {
-    &-logo {
-        font-size: 4rem;
-        font-weight: 700;
-        font-family: "Shrikhand";
-    }
+.loader-logo {
+    font-family: "Shrikhand", "Roboto", sans-serif;
+    font-size: 4rem;
+}
 
-    &-description {
-        font-size: 2rem;
-    }
+.loader-description {
+    // https://utopia.fyi/type/calculator/?c=320,16,1.2,1440,32,1.25
+    font-size: clamp(1rem, 0.7143rem + 1.4286vw, 2rem);
+    font-weight: 400;
 }
 
 .main-title {

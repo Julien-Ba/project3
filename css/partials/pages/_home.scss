@@ -12,14 +12,23 @@
     flex-direction: column;
     gap: 3rem;
     z-index: -1;
+    background-color: utils.$section-bg-clr;
     animation: fade-out-delayed 3.5s;
 
     &-logo {
-        animation: clip-in 1s;
+        padding: 10rem;
+        background: linear-gradient(to left, utils.$txt-clr 0, utils.$btn-bg-clr 5%, utils.$btn-bg-clr-light 10%, utils.$txt-clr 15%);
+        background-position: 0;
+        background-clip: text;
+        color: transparent;
+        animation: clip-in 1s, shine 3s 1s linear;
     }
 
     &-description {
-        animation: slide-up 2s ease-in-out forwards;
+        text-align: center;
+        margin-inline: 2rem;
+        text-wrap: balance;
+        animation: slide-up 2s ease-out forwards;
     }
 }
 

@@ -50,10 +50,21 @@ li {
 }
 @keyframes slide-up {
   from {
-    transform: translateY(60dvh);
+    transform: translateY(80dvh);
   }
   to {
-    transform: translateY(30dvh);
+    transform: translateY(10dvh);
+  }
+}
+@keyframes shine {
+  0% {
+    background-position: 100%;
+  }
+  60% {
+    background-position: -40rem;
+  }
+  100% {
+    background-position: 0;
   }
 }
 * {
@@ -67,12 +78,13 @@ p {
 }
 
 .loader-logo {
+  font-family: "Shrikhand", "Roboto", sans-serif;
   font-size: 4rem;
-  font-weight: 700;
-  font-family: "Shrikhand";
 }
+
 .loader-description {
-  font-size: 2rem;
+  font-size: clamp(1rem, 0.7143rem + 1.4286vw, 2rem);
+  font-weight: 400;
 }
 
 .main-title {
@@ -173,14 +185,15 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 250ms ease-in-out;
+  transition: transform 500ms ease-in-out;
 }
 .icon-like-outline {
-  transition: color 250ms ease-out;
+  transition: color 500ms ease-out;
 }
 .icon-like-outline:hover {
   color: transparent;
   transform: scale(1.2);
+  transition: color 250ms ease-out, transform 250ms ease-in-out;
 }
 .icon-like-bg {
   transform: scale(0);
@@ -190,6 +203,7 @@ p {
 }
 .icon-like:hover .icon-like-bg {
   transform: scale(1.1);
+  transition: transform 250ms ease-in-out;
 }
 
 .card {
@@ -201,7 +215,7 @@ p {
   transition: transform 250ms ease-in;
 }
 .card:is(:hover, :focus):has(.card-image) {
-  filter: brightness(1.02) saturate(1.05);
+  filter: brightness(1.05) saturate(1.05);
   transition: filter 250ms ease-in;
 }
 
@@ -374,13 +388,22 @@ section {
   flex-direction: column;
   gap: 3rem;
   z-index: -1;
+  background-color: #F6F6F6;
   animation: fade-out-delayed 3.5s;
 }
 .loader-logo {
-  animation: clip-in 1s;
+  padding: 10rem;
+  background: linear-gradient(to left, #000000 0, #9356DC 5%, #e371da 10%, #000000 15%);
+  background-position: 0;
+  background-clip: text;
+  color: transparent;
+  animation: clip-in 1s, shine 3s 1s linear;
 }
 .loader-description {
-  animation: slide-up 2s ease-in-out forwards;
+  text-align: center;
+  margin-inline: 2rem;
+  text-wrap: balance;
+  animation: slide-up 2s ease-out forwards;
 }
 
 .main-container {

@@ -33,9 +33,21 @@
 
 @keyframes slide-up {
     from {
-        transform: translateY(60dvh);
+        transform: translateY(80dvh);
     }
     to {
-        transform: translateY(30dvh);
+        transform: translateY(10dvh);
+    }
+}
+
+@keyframes shine {
+    0% {
+        background-position: 100%;
+    }
+    60% {
+        background-position: -40rem;
+    }
+    100% {
+        background-position: 0;
     }
 }

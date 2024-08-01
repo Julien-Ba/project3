@@ -9,7 +9,7 @@
         transform: scale(1.01);
         @include utils.transition-in(transform);
         &:has(.card-image) {
-            filter: brightness(1.02) saturate(1.05);
+            filter: brightness(1.05) saturate(1.05);
             @include utils.transition-in(filter);
         }
     }
