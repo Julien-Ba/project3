@@ -2,6 +2,35 @@
 
 
 
+//----- loader -----//
+
+.loader {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    @include utils.flex-center;
+    flex-direction: column;
+    gap: 3rem;
+    z-index: -1;
+    animation: fade-out-delayed 3.5s;
+
+    &-logo {
+        font-size: 4rem;
+        font-family: "Shrikhand";
+        animation: clip-in 1s;
+    }
+
+    &-description {
+        font-size: 2rem;
+        animation: slide-up 2s ease-in-out forwards;
+    }
+}
+
+.main-container {
+    background-color: utils.$main-bg-clr;
+    animation: fade-in-delayed 3.5s; // the main container start to appear 2975ms after the start of the animation
+}
+
 //----- location -----//
 
 .location {

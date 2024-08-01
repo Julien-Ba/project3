@@ -1,0 +1,41 @@
+@keyframes fade-in-delayed {
+    0%, 80% {
+        opacity: 0;
+    }
+    85% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out-delayed {
+    0%, 80% {
+        opacity: 1;
+    }
+    85% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes clip-in {
+    from {
+        clip-path: inset(0 100% 0 0);
+    }
+    to {
+        clip-path: inset(0 -10% 0 0);
+    }
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(60dvh);
+    }
+    to {
+        transform: translateY(30dvh);
+    }
+}
