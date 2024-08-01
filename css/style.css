@@ -66,6 +66,15 @@ p {
   max-width: 60ch;
 }
 
+.loader-logo {
+  font-size: 4rem;
+  font-weight: 700;
+  font-family: "Shrikhand";
+}
+.loader-description {
+  font-size: 2rem;
+}
+
 .main-title {
   font-size: clamp(1.5rem, 1.2143rem + 1.4286vw, 2.5rem);
 }
@@ -368,12 +377,9 @@ section {
   animation: fade-out-delayed 3.5s;
 }
 .loader-logo {
-  font-size: 4rem;
-  font-family: "Shrikhand";
   animation: clip-in 1s;
 }
 .loader-description {
-  font-size: 2rem;
   animation: slide-up 2s ease-in-out forwards;
 }
 

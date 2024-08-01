@@ -12,6 +12,18 @@ p {
     max-width: 60ch;
 }
 
+.loader {
+    &-logo {
+        font-size: 4rem;
+        font-weight: 700;
+        font-family: "Shrikhand";
+    }
+
+    &-description {
+        font-size: 2rem;
+    }
+}
+
 .main-title {
     // https://utopia.fyi/type/calculator?c=320,24,1.2,1440,40,1.25
     font-size: clamp(1.5rem, 1.2143rem + 1.4286vw, 2.5rem);
