@@ -67,6 +67,22 @@ li {
     background-position: 0;
   }
 }
+/*
+
+    The website was integrated on mobile first
+
+    the map must be kept in order of screen sizes
+    the key: "mobile" is just here as a placeholder
+    it represents the base model from which everything respond to
+
+    the mixin "respond-to" check if the value the media query is using is above or below "mobile" in the list
+    if it's below it then associate a max-width, if it's above, a min-width
+
+    if the media query should respond to a single screen size, 
+    the mixin "respond-only-to" associate a min-width and look for the next value in the list to set a max-width
+    if it was the first or last value of the map or if the next value is the default one, return to the previous mixin
+
+*/
 * {
   font-family: "Roboto", sans-serif;
   color: #000000;
@@ -253,6 +269,7 @@ p {
 }
 .instructions-cards .card-content {
   display: flex;
+  align-items: center;
   gap: 1rem;
   padding-left: 2rem;
 }
@@ -286,6 +303,23 @@ p {
   align-items: center;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .instructions-cards .card {
+    width: 30rem;
+  }
+  .instructions-cards .card::before {
+    left: 4rem;
+    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.2));
+    transition: filter 500ms ease-in;
+  }
+  .instructions-cards .card:hover::before {
+    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.4));
+    transition: filter 250ms ease-in;
+  }
+  .instructions-cards .card-content {
+    padding-left: 9rem;
+  }
+}
 .tag {
   padding: 0.5rem 1rem;
   margin: 1rem;

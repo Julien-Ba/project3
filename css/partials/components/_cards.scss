@@ -50,6 +50,7 @@
 
     &-content {
         display: flex;
+        align-items: center;
         gap: 1rem;
         padding-left: 2rem;
     }
@@ -88,5 +89,26 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+}
+
+@include utils.respond-only-to("tablet") {
+    .instructions-cards .card {
+        width: 30rem;
+
+        &::before {
+            left: 4rem;
+            filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.2));
+            @include utils.transition-out(filter);
+        }
+
+        &:hover::before {
+            filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.4));
+            @include utils.transition-in(filter);
+        }
+
+        &-content {
+            padding-left: 9rem;
+        }
     }
 }
