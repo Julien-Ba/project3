@@ -220,19 +220,34 @@ p {
 }
 
 .instructions-cards .card {
-  width: min(20rem, 90vw);
+  width: min(20rem, 90vw - 2rem);
   height: 4rem;
   display: flex;
   align-items: center;
   background-color: #F6F6F6;
   filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.1));
   transition: filter 500ms ease-in, color 500ms ease-in;
+  position: relative;
+}
+.instructions-cards .card::before {
+  counter-increment: instruction;
+  content: counter(instruction);
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -1rem;
+  background-color: #9356DC;
+  border-radius: 50%;
+  color: #FFFFFF;
 }
 .instructions-cards .card:hover {
   filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.3));
   transition: filter 250ms ease-in;
 }
-.instructions-cards .card:hover .fa-solid {
+.instructions-cards .card:hover .fa-idle {
   color: #9356DC;
   transition: color 250ms ease-in;
 }
@@ -446,21 +461,6 @@ section {
   flex-direction: column;
   gap: 1rem;
   counter-reset: instruction;
-  position: relative;
-}
-.instructions-cards .card::before {
-  counter-increment: instruction;
-  content: counter(instruction);
-  width: 2rem;
-  height: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  left: -1rem;
-  background-color: #9356DC;
-  border-radius: 50%;
-  color: #FFFFFF;
 }
 
 .restaurants {

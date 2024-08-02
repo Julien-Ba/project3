@@ -15,27 +15,40 @@
     }
 }
 
-.instructions-cards {
-    & .card {
-        width: min(20rem, 90vw);
-        height: 4rem;
-        display: flex;
-        align-items: center;
-        background-color: utils.$section-bg-clr;
-        filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.1));
-        @include utils.transition-out(filter, color);
-        
-        &:hover {
-            filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.3));
-            @include utils.transition-in(filter);
-            & .fa-solid {
-                color: utils.$btn-bg-clr;
-                @include utils.transition-in(color);
-            }
+.instructions-cards .card {
+    width: min(20rem, calc(90vw - 2rem)); // 90vw for the margin on mobile + 2rem for the counter
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    background-color: utils.$section-bg-clr;
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.1));
+    @include utils.transition-out(filter, color);
+    position: relative;
+
+    &::before {
+        counter-increment: instruction;
+        content: counter(instruction);
+        width: 2rem;
+        height: 2rem;
+        @include utils.flex-center;
+        position: absolute;
+        left: -1rem;
+        background-color: utils.$btn-bg-clr;
+        border-radius: 50%;
+        color: utils.$main-bg-clr;
+    }
+
+    &:hover {
+        filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.3));
+        @include utils.transition-in(filter);
+
+        & .fa-idle {
+            color: utils.$btn-bg-clr;
+            @include utils.transition-in(color);
         }
     }
-    
-    & .card-content {
+
+    &-content {
         display: flex;
         gap: 1rem;
         padding-left: 2rem;

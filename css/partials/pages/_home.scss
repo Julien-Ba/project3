@@ -73,20 +73,6 @@
     flex-direction: column;
     gap: 1rem;
     counter-reset: instruction;
-    position: relative;
-
-    & .card::before {
-        counter-increment: instruction;
-        content: counter(instruction);
-        width: 2rem;
-        height: 2rem;
-        @include utils.flex-center;
-        position: absolute;
-        left: -1rem;
-        background-color: utils.$btn-bg-clr;
-        border-radius: 50%;
-        color: utils.$main-bg-clr;
-    }
 }
 
 //----- restaurants -----//
@@ -107,7 +93,7 @@
     }
 }
 
-
+//----- media queries -----//
 
 @include utils.respond-to("tablet") {
     .location, .explore {
