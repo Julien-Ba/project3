@@ -394,7 +394,6 @@ section {
 .loader-logo {
   padding: 10rem;
   background: linear-gradient(to left, #000000 0, #9356DC 5%, #e371da 10%, #000000 15%);
-  background-position: 0;
   background-clip: text;
   color: transparent;
   animation: clip-in 1s, shine 3s 1s linear;
@@ -446,6 +445,22 @@ section {
   align-items: center;
   flex-direction: column;
   gap: 1rem;
+  counter-reset: instruction;
+  position: relative;
+}
+.instructions-cards .card::before {
+  counter-increment: instruction;
+  content: counter(instruction);
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -1rem;
+  background-color: #9356DC;
+  border-radius: 50%;
+  color: #FFFFFF;
 }
 
 .restaurants {
