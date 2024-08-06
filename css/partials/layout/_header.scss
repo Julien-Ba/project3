@@ -10,6 +10,7 @@
     &-logo {
         width: 197px;
         height: 36px;
+        @include utils.flex-center;
         @include utils.transition-in(filter, transform);
 
         &:hover {
