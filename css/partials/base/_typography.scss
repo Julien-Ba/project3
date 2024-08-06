@@ -23,6 +23,10 @@ p {
     font-weight: 400;
 }
 
+.header {
+    font-size: 1.5rem;
+}
+
 .main-title {
     // https://utopia.fyi/type/calculator?c=320,24,1.2,1440,40,1.25
     font-size: clamp(1.5rem, 1.2143rem + 1.4286vw, 2.5rem);
@@ -31,6 +35,11 @@ p {
 .main-description {
     font-size: 1.125rem;
     font-weight: 300;
+}
+
+.restaurant-title {
+    font-family: "Shrikhand", "Roboto", sans-serif;
+    font-size: 1.75rem;
 }
 
 .section-title {
@@ -43,18 +52,37 @@ p {
     font-size: 1rem;
 }
 
-.card-title {
+.menu-title {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.restaurant-card-title {
     font-size: 1.125rem;
     font-weight: 700;
 }
 
-.card-subtitle {
+.menu-card-title {
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.restaurant-card-subtitle {
     font-size: 1.0625rem;
+    font-weight: 300;
+}
+
+.menu-card-subtitle {
+    font-size: 0.9375rem;
     font-weight: 300;
 }
 
 .card-description {
     font-size: 0.9375rem;
+}
+
+.price {
+    font-weight: 700;
 }
 
 .btn-title {
@@ -69,10 +97,12 @@ p {
 }
 
 .fa {
+
     &-solid,
     &-regular {
         font-family: "Font Awesome 6 Free";
     }
+
     &-idle {
         color: utils.$icon-clr-idle;
     }

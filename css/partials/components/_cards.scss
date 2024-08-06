@@ -1,13 +1,54 @@
 @use "../utils";
 
 
-.card {
-    border-radius: 1.25rem;
-    @include utils.transition-out(transform, filter);
 
-    &:is(:hover, :focus) {
+%card-overflow {
+    overflow: hidden;
+
+    *:not(.card-icon) {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}
+
+%card-shadow {
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.1));
+    @include utils.transition-out(filter);
+
+    &:is(:hover, :focus, :focus-within) {
+        filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.2));
+        @include utils.transition-in(filter);
+    }
+}
+
+%card-scale {
+    @include utils.transition-out(transform);
+
+    &:is(:hover, :focus, :focus-within) {
         transform: scale(1.01);
         @include utils.transition-in(transform);
+    }
+}
+
+.card {
+    border-radius: 1.25rem;
+    background-color: utils.$card-bg-clr;
+    @include utils.transition-out(filter);
+
+    > :not(.card-image, .container-tag) {
+        margin-inline: utils.$card-padding;
+    }
+
+    > :first-child:not(.card-image, .container-tag) {
+        margin-block-start: utils.$card-padding;
+    }
+
+    > :last-child:not(.card-image, .container-tag) {
+        margin-block-end: utils.$card-padding;
+    }
+
+    &:is(:hover, :focus, :focus-within) {
         &:has(.card-image) {
             filter: brightness(1.05) saturate(1.05);
             @include utils.transition-in(filter);
@@ -20,10 +61,10 @@
     height: 4rem;
     display: flex;
     align-items: center;
-    background-color: utils.$section-bg-clr;
-    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.1));
-    @include utils.transition-out(filter, color);
     position: relative;
+    background-color: utils.$section-bg-clr;
+    @include utils.transition-out(color);
+    @extend %card-shadow;
 
     &::before {
         counter-increment: instruction;
@@ -39,9 +80,6 @@
     }
 
     &:hover {
-        filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.3));
-        @include utils.transition-in(filter);
-
         & .fa-idle {
             color: utils.$btn-bg-clr;
             @include utils.transition-in(color);
@@ -56,41 +94,45 @@
     }
 }
 
-.restaurants-cards {
-    & .card {
-        gap: 1rem;
-        background-color: utils.$card-bg-clr;
-        overflow: hidden;
-        position: relative;
+.restaurants-cards .card {
+    position: relative;
+    gap: 1rem;
+    @extend %card-overflow;
+    @extend %card-scale;
 
-        & > :not(.card-image, .container-tag) {
-            margin-inline: utils.$card-padding;
-        }
-    
-        & > :last-child:not(.card-image, .container-tag) {
-            margin-block-end: utils.$card-padding;
-        }
-    }   
-
-    & .card-image {
+    .card-image {
         width: 100%;
         height: 10rem;
         object-fit: cover;
     }
 
-    & .container-tag {
+    .container-tag {
         width: 100%;
         display: flex;
         justify-content: flex-end;
         position: absolute;
     }
 
-    & .card-content {
+    .card-content {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 }
+
+.menu-cards .card {
+    display: grid;
+    grid-template-columns: 1fr 4rem;
+    grid-template-rows: repeat(2, 1fr);
+    @extend %card-overflow;
+    @extend %card-shadow;
+
+    .menu-card-title {
+        grid-column: -1/1;
+    }
+}
+
+
 
 @include utils.respond-only-to("tablet") {
     .instructions-cards .card {
