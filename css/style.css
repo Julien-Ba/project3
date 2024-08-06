@@ -694,7 +694,9 @@ section {
 }
 .menu-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
 }
 .menu-title {
   width: fit-content;

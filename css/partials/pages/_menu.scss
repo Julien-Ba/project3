@@ -41,8 +41,8 @@
     background-color: utils.$section-bg-clr;
 
     &-header {
-        display: flex;
-        justify-content: space-between;
+        @include utils.flex-center;
+        gap: 4rem;
     }
 
     &-title {
