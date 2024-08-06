@@ -63,7 +63,7 @@
     align-items: center;
     position: relative;
     background-color: utils.$section-bg-clr;
-    @include utils.transition-out(color);
+    //@include utils.transition-out(color);
     @extend %card-shadow;
 
     &::before {
@@ -79,11 +79,9 @@
         color: utils.$main-bg-clr;
     }
 
-    &:hover {
-        & .fa-idle {
-            color: utils.$btn-bg-clr;
-            @include utils.transition-in(color);
-        }
+    &:hover .fa-idle {
+        color: utils.$btn-bg-clr;
+        @include utils.transition-in(color);
     }
 
     &-content {
@@ -122,13 +120,51 @@
 
 .menu-cards .card {
     display: grid;
-    grid-template-columns: 1fr 4rem;
+    grid-template-columns: 1fr 4rem 0;
     grid-template-rows: repeat(2, 1fr);
     @extend %card-overflow;
     @extend %card-shadow;
+    transition: grid-template-columns 500ms ease-out;
 
     .menu-card-title {
         grid-column: -1/1;
+    }
+
+    &:hover {
+        grid-template-columns: 1fr 4rem 5rem;
+        transition: grid-template-columns 250ms ease-out;
+    }
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        grid-column: 3;
+        background-color: utils.$highlight-clr-light;
+    }
+
+    &::after {
+        content: "\f00c";
+        font-family: fontawesome;
+        width: 2rem;
+        height: 2rem;
+        position: fixed;
+        grid-column: 3;
+        justify-self: center;
+        align-self: center;
+        text-align: center;
+        align-content: center;
+        border-radius: 50%;
+        background-color: utils.$main-bg-clr;
+        color: utils.$highlight-clr-light;
+        transform: translateX(2rem);
+        transition: transform 500ms ease-out;
+    }
+
+    &:hover::after {
+        transform: translate(0);
+        transition: transform 250ms ease-out;
     }
 }
 
