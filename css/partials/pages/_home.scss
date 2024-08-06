@@ -33,6 +33,9 @@
 
 .main-container {
     background-color: utils.$main-bg-clr;
+}
+
+.main-loader {
     animation: fade-in-delayed 3.5s; // the main container start to appear 2975ms after the start of the animation
 }
 
@@ -96,7 +99,9 @@
 //----- media queries -----//
 
 @include utils.respond-to("tablet") {
-    .location, .explore {
+
+    .location,
+    .explore {
         box-shadow: none;
     }
 
@@ -110,7 +115,7 @@
 @include utils.respond-to("desktop") {
     .instructions-cards {
         flex-direction: row;
-        justify-content: space-between; 
+        justify-content: space-between;
         gap: 2rem;
     }
 }
