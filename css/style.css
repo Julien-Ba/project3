@@ -546,6 +546,11 @@ section {
   .footer-links {
     order: -1;
   }
+  a:has(.footer-logo) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 @media (min-width: 1440px) {
   .footer {

@@ -90,6 +90,10 @@
         &-links {
             order: -1;
         }
+
+        a:has(&-logo) {
+            @include utils.flex-center;
+        }
     }
 }
 
