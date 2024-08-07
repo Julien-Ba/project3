@@ -3,7 +3,7 @@
 
 
 
-// declaration of @property to allow the animation of the background-image that is not animatable
+// declaration of @property to allow the animation of the background-image which is not animatable
 @property --color-gradient-1 {
     syntax: "<color>";
     inherits: true;
@@ -36,7 +36,7 @@
     }
 
     .menu & {
-        width: clamp(10rem, 80vw, 16rem);
+        width: clamp(10rem, 80vw, 12rem);
     }
 }
 
