@@ -41,8 +41,9 @@
     background-color: utils.$section-bg-clr;
 
     &-header {
-        @include utils.flex-center;
-        gap: 4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     &-title {
@@ -78,6 +79,11 @@
 @include utils.respond-to("tablet") {
     .hero-img {
         height: 21rem;
+    }
+
+    .menu-header {
+        justify-content: center;
+        gap: 4rem;
     }
 }
 
