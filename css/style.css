@@ -118,7 +118,7 @@ p {
 
 .restaurant-title {
   font-family: "Shrikhand", "Roboto", sans-serif;
-  font-size: 1.75rem;
+  font-size: clamp(1.625rem, 1.5536rem + 0.3571vw, 1.875rem);
 }
 
 .section-title {
@@ -216,7 +216,7 @@ p {
   transition: filter 250ms ease-in, transform 250ms ease-in, --color-gradient-1 250ms ease-in, --color-gradient-2 250ms ease-in;
 }
 .menu .btn {
-  width: clamp(10rem, 80vw, 16rem);
+  width: clamp(10rem, 80vw, 12rem);
 }
 
 .icon-like {
@@ -694,9 +694,8 @@ section {
 }
 .menu-header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 4rem;
 }
 .menu-title {
   width: fit-content;
@@ -725,6 +724,10 @@ section {
 @media (min-width: 768px) {
   .hero-img {
     height: 21rem;
+  }
+  .menu-header {
+    justify-content: center;
+    gap: 4rem;
   }
 }
 @media (min-width: 1024px) {
