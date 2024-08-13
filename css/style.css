@@ -640,6 +640,11 @@ section {
   grid-template-rows: 10rem auto;
   gap: 1rem;
 }
+.restaurants-cards .card-link {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 2;
+}
 .restaurants-cards .card {
   display: grid;
   grid-row: span 2;
