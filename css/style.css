@@ -636,7 +636,6 @@ section {
 
 .restaurants-cards {
   display: grid;
-  grid-auto-flow: dense;
   grid-template-rows: 10rem auto;
   gap: 1rem;
 }
