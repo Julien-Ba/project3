@@ -543,7 +543,7 @@ section {
     align-items: center;
     gap: 3rem;
   }
-  .footer-links {
+  .footer-navbar {
     order: -1;
   }
   a:has(.footer-logo) {
