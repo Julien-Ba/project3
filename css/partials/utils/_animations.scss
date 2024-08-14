@@ -1,5 +1,6 @@
 @keyframes fade-in-delayed {
-    0%, 80% {
+    0%,
+    80% {
         opacity: 0;
     }
     85% {
@@ -11,7 +12,8 @@
 }
 
 @keyframes fade-out-delayed {
-    0%, 80% {
+    0%,
+    80% {
         opacity: 1;
     }
     85% {
@@ -49,5 +51,14 @@
     }
     100% {
         background-position: 0;
+    }
+}
+
+@keyframes slide-card {
+    from {
+        transform: translateX(-100vw);
+    }
+    to {
+        transform: translateY(0);
     }
 }

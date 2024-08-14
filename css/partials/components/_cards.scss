@@ -1,7 +1,5 @@
 @use "../utils";
 
-
-
 %card-overflow {
     overflow: hidden;
 
@@ -57,7 +55,10 @@
 }
 
 .instructions-cards .card {
-    width: min(20rem, calc(90vw - 2rem)); // 90vw for the margin on mobile + 2rem for the counter
+    width: min(
+        20rem,
+        calc(90vw - 2rem)
+    ); // 90vw for the margin on mobile + 2rem for the counter
     height: 4rem;
     display: flex;
     align-items: center;
@@ -168,7 +169,13 @@
     }
 }
 
-
+.menu-cards {
+    @for $i from 1 through 4 {
+        .card:nth-child(#{$i}) {
+            animation: slide-card ($i * 500ms) ease-out;
+        }
+    }
+}
 
 @include utils.respond-only-to("tablet") {
     .instructions-cards .card {

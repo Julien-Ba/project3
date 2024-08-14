@@ -67,6 +67,14 @@ li {
     background-position: 0;
   }
 }
+@keyframes slide-card {
+  from {
+    transform: translateX(-100vw);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 /*
 
     The website was integrated on mobile first
@@ -397,6 +405,19 @@ p {
 .menu-cards .card:hover::after {
   transform: translate(0);
   transition: transform 250ms ease-out;
+}
+
+.menu-cards .card:nth-child(1) {
+  animation: slide-card 500ms ease-out;
+}
+.menu-cards .card:nth-child(2) {
+  animation: slide-card 1000ms ease-out;
+}
+.menu-cards .card:nth-child(3) {
+  animation: slide-card 1500ms ease-out;
+}
+.menu-cards .card:nth-child(4) {
+  animation: slide-card 2000ms ease-out;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
