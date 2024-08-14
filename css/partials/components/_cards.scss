@@ -128,7 +128,11 @@
     transition: grid-template-columns 500ms ease-out;
 
     .menu-card-title {
-        grid-column: -1/1;
+        grid-column: span 2;
+    }
+
+    .menu-card-subtitle {
+        grid-column: 1;
     }
 
     &:hover {

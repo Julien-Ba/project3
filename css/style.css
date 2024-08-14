@@ -371,7 +371,10 @@ p {
   transition: grid-template-columns 500ms ease-out;
 }
 .menu-cards .card .menu-card-title {
-  grid-column: -1/1;
+  grid-column: span 2;
+}
+.menu-cards .card .menu-card-subtitle {
+  grid-column: 1;
 }
 .menu-cards .card:hover {
   grid-template-columns: 1fr 4rem 5rem;
