@@ -1,7 +1,5 @@
 @use "../utils";
 
-
-
 * {
     font-family: "Roboto", sans-serif;
     color: utils.$txt-clr;
@@ -14,10 +12,11 @@ p {
 
 .loader-logo {
     font-family: "Shrikhand", "Roboto", sans-serif;
-    font-size: 4rem;
+    // https://utopia.fyi/type/calculator/?c=320,48,1.2,1440,64,1.25
+    font-size: clamp(3rem, 2.7143rem + 1.4286vw, 4rem);
 }
 
-.loader-description {
+.loader-subtitle {
     // https://utopia.fyi/type/calculator/?c=320,16,1.2,1440,32,1.25
     font-size: clamp(1rem, 0.7143rem + 1.4286vw, 2rem);
     font-weight: 400;
@@ -32,7 +31,7 @@ p {
     font-size: clamp(1.5rem, 1.2143rem + 1.4286vw, 2.5rem);
 }
 
-.main-description {
+.main-subtitle {
     font-size: 1.125rem;
     font-weight: 300;
 }
@@ -98,7 +97,6 @@ p {
 }
 
 .fa {
-
     &-solid,
     &-regular {
         font-family: "Font Awesome 6 Free";
