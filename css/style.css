@@ -601,7 +601,7 @@ section {
   color: transparent;
   animation: clip-in 1s, shine 3s 1s linear;
 }
-.loader-description {
+.loader-subtitle {
   text-align: center;
   margin-inline: 2rem;
   text-wrap: balance;
