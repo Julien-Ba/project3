@@ -410,19 +410,6 @@ p {
   transition: transform 250ms ease-out;
 }
 
-.menu-cards .card:nth-child(1) {
-  animation: slide-card 500ms ease-out;
-}
-.menu-cards .card:nth-child(2) {
-  animation: slide-card 1000ms ease-out;
-}
-.menu-cards .card:nth-child(3) {
-  animation: slide-card 1500ms ease-out;
-}
-.menu-cards .card:nth-child(4) {
-  animation: slide-card 2000ms ease-out;
-}
-
 @media (min-width: 768px) and (max-width: 1024px) {
   .instructions-cards .card {
     width: 30rem;
@@ -745,10 +732,22 @@ section {
   height: 0.2rem;
   background-color: #99E2D0;
 }
-.menu .menu-cards {
+.menu-cards {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+.menu-cards .card:nth-child(1) {
+  animation: slide-card 500ms ease-out;
+}
+.menu-cards .card:nth-child(2) {
+  animation: slide-card 1000ms ease-out;
+}
+.menu-cards .card:nth-child(3) {
+  animation: slide-card 1500ms ease-out;
+}
+.menu-cards .card:nth-child(4) {
+  animation: slide-card 2000ms ease-out;
 }
 .menu .btn {
   align-self: center;

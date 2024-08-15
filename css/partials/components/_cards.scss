@@ -173,14 +173,6 @@
     }
 }
 
-.menu-cards {
-    @for $i from 1 through 4 {
-        .card:nth-child(#{$i}) {
-            animation: slide-card ($i * 500ms) ease-out;
-        }
-    }
-}
-
 @include utils.respond-only-to("tablet") {
     .instructions-cards .card {
         width: 30rem;

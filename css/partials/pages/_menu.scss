@@ -1,8 +1,6 @@
 @use "sass:map";
 @use "../utils";
 
-
-
 .header {
     position: relative;
 
@@ -63,18 +61,21 @@
         }
     }
 
-    .menu-cards {
+    &-cards {
         display: flex;
         flex-direction: column;
         gap: 1rem;
+        @for $i from 1 through 4 {
+            .card:nth-child(#{$i}) {
+                animation: slide-card ($i * 500ms) ease-out;
+            }
+        }
     }
 
     .btn {
         align-self: center;
     }
 }
-
-
 
 @include utils.respond-to("tablet") {
     .hero-img {
