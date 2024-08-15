@@ -745,20 +745,60 @@ section {
   flex-direction: column;
   gap: 1rem;
 }
-.menu-cards .card:nth-child(1) {
-  animation: slide-card 500ms ease-out;
-}
-.menu-cards .card:nth-child(2) {
-  animation: slide-card 1000ms ease-out;
-}
-.menu-cards .card:nth-child(3) {
-  animation: slide-card 1500ms ease-out;
-}
-.menu-cards .card:nth-child(4) {
-  animation: slide-card 2000ms ease-out;
-}
 .menu .btn {
   align-self: center;
+}
+
+.menu article:nth-child(1) .menu-cards .card:nth-child(1) {
+  animation: slide-card 500ms ease-out;
+}
+.menu article:nth-child(1) .menu-cards .card:nth-child(2) {
+  animation: slide-card 700ms ease-out;
+}
+.menu article:nth-child(1) .menu-cards .card:nth-child(3) {
+  animation: slide-card 900ms ease-out;
+}
+.menu article:nth-child(1) .menu-cards .card:nth-child(4) {
+  animation: slide-card 1100ms ease-out;
+}
+
+.menu article:nth-child(2) .menu-cards .card:nth-child(1) {
+  animation: slide-card 1500ms ease-out;
+}
+.menu article:nth-child(2) .menu-cards .card:nth-child(2) {
+  animation: slide-card 1700ms ease-out;
+}
+.menu article:nth-child(2) .menu-cards .card:nth-child(3) {
+  animation: slide-card 1900ms ease-out;
+}
+.menu article:nth-child(2) .menu-cards .card:nth-child(4) {
+  animation: slide-card 2100ms ease-out;
+}
+
+.menu article:nth-child(3) .menu-cards .card:nth-child(1) {
+  animation: slide-card 2500ms ease-out;
+}
+.menu article:nth-child(3) .menu-cards .card:nth-child(2) {
+  animation: slide-card 2700ms ease-out;
+}
+.menu article:nth-child(3) .menu-cards .card:nth-child(3) {
+  animation: slide-card 2900ms ease-out;
+}
+.menu article:nth-child(3) .menu-cards .card:nth-child(4) {
+  animation: slide-card 3100ms ease-out;
+}
+
+.menu article:nth-child(4) .menu-cards .card:nth-child(1) {
+  animation: slide-card 3500ms ease-out;
+}
+.menu article:nth-child(4) .menu-cards .card:nth-child(2) {
+  animation: slide-card 3700ms ease-out;
+}
+.menu article:nth-child(4) .menu-cards .card:nth-child(3) {
+  animation: slide-card 3900ms ease-out;
+}
+.menu article:nth-child(4) .menu-cards .card:nth-child(4) {
+  animation: slide-card 4100ms ease-out;
 }
 
 @media (min-width: 768px) {
