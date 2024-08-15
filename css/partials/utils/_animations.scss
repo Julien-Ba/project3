@@ -1,4 +1,6 @@
-@keyframes fade-in-delayed {
+// loader
+
+@keyframes page-fade-in {
     0%,
     80% {
         opacity: 0;
@@ -11,7 +13,7 @@
     }
 }
 
-@keyframes fade-out-delayed {
+@keyframes loader-fade-out {
     0%,
     80% {
         opacity: 1;
@@ -53,6 +55,8 @@
         background-position: 0;
     }
 }
+
+// card
 
 @keyframes slide-card {
     from {

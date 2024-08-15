@@ -1,7 +1,5 @@
 @use "../utils";
 
-
-
 //----- loader -----//
 
 .loader {
@@ -9,15 +7,21 @@
     height: 100%;
     position: fixed;
     @include utils.flex-center;
-    flex-direction: column;
     gap: 3rem;
+    flex-direction: column;
     z-index: -1;
     background-color: utils.$section-bg-clr;
-    animation: fade-out-delayed 3.5s;
+    animation: loader-fade-out 3.5s;
 
     &-logo {
         padding: 10rem;
-        background: linear-gradient(to left, utils.$txt-clr 0, utils.$btn-bg-clr 5%, utils.$btn-bg-clr-light 10%, utils.$txt-clr 15%);
+        background: linear-gradient(
+            to left,
+            utils.$txt-clr 0,
+            utils.$btn-bg-clr 5%,
+            utils.$btn-bg-clr-light 10%,
+            utils.$txt-clr 15%
+        );
         background-clip: text;
         color: transparent;
         animation: clip-in 1s, shine 3s 1s linear;
@@ -36,7 +40,7 @@
 }
 
 .main-loader {
-    animation: fade-in-delayed 3.5s; // the main container start to appear 2975ms after the start of the animation
+    animation: page-fade-in 3.5s; // the main container start to appear 2975ms after the start of the animation
 }
 
 //----- location -----//
@@ -104,7 +108,6 @@
 //----- media queries -----//
 
 @include utils.respond-to("tablet") {
-
     .location,
     .explore {
         box-shadow: none;
