@@ -302,13 +302,13 @@ p {
   background-color: #FFFFFF;
   transition: filter 500ms ease-in;
 }
-.card > :not(.card-image, .container-tag) {
+.card > :not(.card-link-image, .container-tag) {
   margin-inline: 1rem;
 }
-.card > :first-child:not(.card-image, .container-tag) {
+.card > :first-child:not(.card-link-image, .container-tag) {
   margin-block-start: 1rem;
 }
-.card > :last-child:not(.card-image, .container-tag) {
+.card > :last-child:not(.card-link-image, .container-tag) {
   margin-block-end: 1rem;
 }
 .card:is(:hover, :focus, :focus-within):has(.card-image) {
@@ -353,6 +353,7 @@ p {
   position: relative;
   gap: 1rem;
 }
+.restaurants-cards .card .card-link-image,
 .restaurants-cards .card .card-image {
   width: 100%;
   height: 10rem;
@@ -655,11 +656,6 @@ section {
   display: grid;
   grid-template-rows: 10rem auto;
   gap: 1rem;
-}
-.restaurants-cards .card-link {
-  display: grid;
-  grid-template-rows: subgrid;
-  grid-row: span 2;
 }
 .restaurants-cards .card {
   display: grid;
