@@ -1,5 +1,7 @@
 # OhMyFood
 
+🔗 [Live Demo](https://julien-ba.github.io/project3/)
+
 ## Description
 
 This project was developed as part of the OpenClassrooms Web Developer program, focusing on advanced CSS techniques and SASS preprocessing.
